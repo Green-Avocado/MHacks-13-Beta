@@ -2,9 +2,9 @@
 
 ## Existing authentication check
 
-`preAuth.js` is to be imported for any page only accessible to unauthenticated users, such as the login and register pages.
+[`auth_checks/preAuth.js`](auth_checks/preAuth.js) is to be imported for any page only accessible to unauthenticated users, such as the login and register pages.
 
-`authRequired.js` is to be imported for any page requiring authentication, such as a user's chat or matches.
+[`auth_checks/authRequired.js`](auth_checks/authRequired.js) is to be imported for any page requiring authentication, such as a user's chat or matches.
 
 ## Database structure
 
