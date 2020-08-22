@@ -15,6 +15,7 @@
         - ignored
         - profile
             - name: _example name_
+            - profile-picture: _example link_
             - subjects
                 - _example subject_
                     - grade: _example grade_
