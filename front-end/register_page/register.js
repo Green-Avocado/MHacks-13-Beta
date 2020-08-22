@@ -2,7 +2,9 @@ function register() {
     var email = document.getElementById("authEmail").value;
     var pass = document.getElementById("authPass").value;
 
-    if(fieldsValid()) {
+    validity = fieldsValid();
+
+    if(validity == 0) {
         firebase.auth().setPersistence(firebase.auth.Auth.Persistance.SESSION)
             .then(() = {
                 firebase.auth().createUserWithEmailAndPassword(email, pass)
@@ -24,20 +26,32 @@ function register() {
                 alert(errorMessage);
             });
     }
-    else {
-        alert("Incomplete form");
+    else if(validity == -1) {
+        alert("Error: imcomplete form");
+    }
+    else if(validity == -2) {
+        alert("Error: passwords do not match");
     }
 }
 
 function fieldsValid() {
-    var valid = true;
+    var valid = 0;
 
-    //TODO
+    if(
+        document.getElementById('email').value == '' ||
+        document.getElementById('fname').value == '' ||
+        document.getElementById('lname').value == '' ||
+        document.getElementById('pword').value == ''
+    ) {
+        valid = -1;
+    }
+    else if(document.getElementById('pwordc').value != document.getElementById('pword').value) {
+        valid = -2;
+    }
 
     return valid;
 }
 
 function populateUserData() {
-    //TODO
 }
 
