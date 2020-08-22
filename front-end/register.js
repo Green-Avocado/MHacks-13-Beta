@@ -6,14 +6,14 @@ function register() {
         .then(() = {
             firebase.auth().createUserWithEmailAndPassword(email, pass)
                 .then(() => {
-                alert('success');
-            })
-            .catch((error) => {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                console.log(errorCode, errorMEssage);
-                alert(errorMessage);
-            });
+                    alert('success');
+                })
+                .catch((error) => {
+                    let errorCode = error.code;
+                    let errorMessage = error.message;
+                    console.log(errorCode, errorMEssage);
+                    alert(errorMessage);
+                });
         })
         .catch((error) => {
             let errorCode = error.code;
