@@ -12,7 +12,12 @@
     - _example user_
         - chats
         - friends
+        - ignored
         - profile
+            - name: _example name_
+            - subjects
+                - _example subject_
+                    - grade: _example grade_
  - chats
     - _example chatroom_
         - members
