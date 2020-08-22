@@ -16,7 +16,8 @@ h1{
     border-color: grey;
     border-width: 5px;
     border-radius: 30px;
-    padding: 5%;
+    border-style: solid;
+    margin: 5%
 }
 .cross{
     padding: 2%;
