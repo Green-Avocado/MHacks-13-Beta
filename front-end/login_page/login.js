@@ -1,12 +1,12 @@
 function login() {
-    var email = document.getElementById("authEmail").value;
-    var pass = document.getElementById("authPass").value;
+    var email = document.getElementById("namebar").value;
+    var pass = document.getElementById("passwordbar").value;
 
     firebase.auth().setPersistence(firebase.auth.Auth.Persistance.SESSION)
         .then(() => {
             firebase.auth().signInWithEmailAndPassword(email, pass)
                 .then(() => {
-                    alert('success');
+                    window.location.href = "/home.html";
                 })
                 .catch((error) => {
                     let errorCode = error.code;
@@ -28,6 +28,6 @@ function forgotPass() {
 }
 
 function newUser() {
-    //TODO
+    window.location.href = "/register.html";
 }
 
