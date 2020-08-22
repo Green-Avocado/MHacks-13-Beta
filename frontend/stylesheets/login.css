@@ -17,7 +17,12 @@ h1{
     font-family: 'Open Sans', sans-serif;
     color: white;
 }
-
+h3{
+    margin: 10%;
+    margin-top: 25%;
+    color:white;
+    font-family: 'Baloo Tamma 2';
+}
 .login-bar{
     margin-right: 5%;
     margin-top: 2%;
@@ -44,4 +49,10 @@ h1{
     margin:5%;
     padding: 5%;
     font-size: 90px;
+}
+.login,
+.register{
+    color: grey;
+    background-color: white;
+    border-color: grey;
 }
