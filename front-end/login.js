@@ -1,4 +1,6 @@
 function initPage() {
+    //TODO
+    //if auth, redirect to dashboard
 }
 
 function login() {
@@ -27,8 +29,10 @@ function login() {
 }
 
 function forgotPass() {
+    //TODO
 }
 
 function newUser() {
+    //TODO
 }
 
