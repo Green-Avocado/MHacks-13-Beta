@@ -1,8 +1,3 @@
-function initPage() {
-    //TODO
-    //if auth, redirect to dashboard
-}
-
 function login() {
     var email = document.getElementById("authEmail").value;
     var pass = document.getElementById("authPass").value;
