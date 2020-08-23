@@ -53,5 +53,23 @@ function fieldsValid() {
 }
 
 function populateUserData() {
+    var user = firebase.auth().currentUser;
+
+    firebase.database().ref('users/' + user.uid).update({
+        fname : document.getElementById('fname').value,
+        lname : document.getElementById('lname').value,
+        goodmath : document.getElementById('goodmath').value,
+        badmath : document.getElementById('badmath').value,
+        goodscience : document.getElementById('goodscience').value,
+        badscience : document.getElementById('badscience').value,
+        goodhistory : document.getElementById('goodhistory').value,
+        badhistory : document.getElementById('badhistory').value,
+        goodenglish : document.getElementById('goodenglish').value,
+        badenglish : document.getElementById('badenglish').value,
+        goodfrench : document.getElementById('goodfrench').value,
+        badfrench : document.getElementById('badfrench').value,
+        goodspanish : document.getElementById('goodspanish').value,
+        badspanish : document.getElementById('badspanish').value
+    });
 }
 
