@@ -95,7 +95,10 @@ function populateUserData() {
         availableSaturday : document.getElementById('saturday').value,
         availableSunday : document.getElementById('sunday').value,
 
-        profilePicture : pfp
+        profilePicture : pfp,
+
+        ignored: [],
+        friends: []
     })
         .then(() => {
             window.location.replace("/");
