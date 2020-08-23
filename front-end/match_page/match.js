@@ -36,7 +36,7 @@ function loadAllMatches() {
 
 function getMatch(index) {
     var card = document.getElementsByClassName('cards')[index];
-    var modal = document.getElementById('myModal' + (i + 1).toString());
+    var modal = document.getElementById('myModal' + (index + 1).toString());
 
     var image = card.getElementsByClassName('match-user-image')[0];
     var name = card.getElementsByClassName('match-user-name')[0];
