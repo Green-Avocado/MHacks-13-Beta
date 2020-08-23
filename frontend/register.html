@@ -10,25 +10,24 @@
     <link rel="stylesheet" href="stylesheets/sidebar.css">
 </head>
 <body>
-    <div id="mySidepanel" class="sidepanel">
-        <a class="closebtn" onclick="closeNav()"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/home.png">Home</a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/singleplayer.png">Profile</a>
-        <a href="#"><img src="Art Assets/Game Icons Expansion/PNG/White/1x/cpu.png">Match</a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/massiveMultiplayer.png">Friends</a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/exclamation.png">Messages</a>
-        <a href="#"><img src="Art Assets/Game Icons Expansion/PNG/White/1x/car.png">Events</a>
-      </div>
-
     <div class="row">
-        <button class="openbtn" onclick="openNav()"><img src="Art Assets/Game Icons/PNG/White/1x/menuList.png"> Navigation</button>
         <img src="stylesheets/registration-background.PNG"/>
     </div>
     <div class="row" style="margin-left:5%; margin-top: 5%;"> 
         <div class="col">
-            <form class="uploadimg">
-                <label for="pfp">upload image</label><br>
-                <input type="image" id="pfp" name="pfp">
+            <label for="pfp">choose avatar</label>
+            <form class="pfp"><br>
+                    <input type="radio" name="pfp" id="none" value="none">none</input>
+                    <input type="radio" name="pfp" id="beige" value="beige"></input>
+                    <label for="beige"><img src="./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienBeige_badge2.png"/></label> 
+                    <input type="radio" name="pfp" id="blue" value="blue"></input>
+                    <label for="blue"><img src="./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienBlue_badge2.png"/> </label> 
+                    <input type="radio" name="pfp" id="pink" value="pink"></input>
+                    <label for="pink"><img src="./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienPink_badge2.png"/> </label> 
+                    <input type="radio" name="pfp" id="green" value="green"></input>
+                    <label for="green"><img src="./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienGreen_badge2.png"/> </label> 
+                    <input type="radio" name="pfp" id="yellow" value="yellow"></input>
+                    <label for="yellow"><img src="./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienYellow_badge2.png"/> </label> 
             </form>
         </div>
         <div class="col">
@@ -79,10 +78,64 @@
                 <label for="spanish"> spanish</label><br>
             </form>
         </div>
-      </div>
-        <div class="fixed-bottom float-right">
-            <button class="btn btn-lg" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/signal3.png"/>submit</button>
+        <div class="col">
+            <form>
+                <p>Avaliability</p> <br>
+                <label for="monday">monday</label> 
+                <select id="monday" name="monday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>  
+                </select> <br>
+                <label for="tuesday">tuesday</label> 
+                <select id="tuesday" name="tuesday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+                <label for="wednesday">wednesday</label>
+                <select id="wednesday" name="wednesday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+                <label for="thursday">thursday</label>
+                <select id="thursday" name="thursday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+                <label for="friday">friday</label>
+                <select id="friday" name="friday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+                <label for="saturday">saturday</label>
+                <select id="saturday" name="saturday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+                <label for="sunday">sunday</label>
+                <select id="sunday" name="sunday"> 
+                    <option value="unavaliable">unavaliable</option>
+                    <option value="morning">morning</option> 
+                    <option value="afternoon">afternoon</option> 
+                    <option value="evening">evening</option>   
+                </select>  <br>
+            </form>
+            <div class="submit">
+                <button class="btn btn-lg" type="submit">submit</button>
+            </div>
         </div>
+      </div>
       
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
