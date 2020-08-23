@@ -11,14 +11,13 @@
  - users
     - _example user_
         - chats
-        - friends
-        - ignored
-        - profile
-            - name: _example name_
-            - profile-picture: _example link_
-            - subjects
-                - _example subject_
-                    - grade: _example grade_
+        - friends: _example array_
+        - ignored: _example array_
+        - name: _example name_
+        - profile-picture: _example link_
+        - subjects
+            - _example subject_
+                - grade: _example grade_
  - chats
     - _example chatroom_
         - members
