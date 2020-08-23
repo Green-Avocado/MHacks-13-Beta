@@ -3,6 +3,14 @@ h1{
     margin: 5%;
 }
 
+.match-user-image,
+.match-user-name,
+.match-user-subject,
+.match-user-availability{
+    padding: 5%;
+    padding-left: 10%;
+}
+
 .btn{
     padding: 5%;
     padding-top: 2%;
@@ -11,6 +19,9 @@ h1{
     color:white;
     border-radius: 30px;
     font-family: 'Baloo Tamma 2';
+}
+span{
+    padding: 5%;
 }
 .cards{
     border-color: grey;
