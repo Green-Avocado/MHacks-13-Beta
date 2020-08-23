@@ -1,17 +1,8 @@
-firebase.auth().onAuthStateChanged((user) => {
-    if(user) {
-        loadUserProfiles();
-    }
-    else {
-        window.location.replace("/login.html");
-    }
-});
-
 var db = firebase.firestore();
 
 var userList = new Array();
 
-function loadUserProfiles() {
+function initPage() {
     var user = firebase.auth().currentUser;
 
     db.collection('users').get()
