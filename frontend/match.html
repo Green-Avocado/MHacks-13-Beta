@@ -12,11 +12,10 @@
 <body>
     <div id="mySidepanel" class="sidepanel">
         <a class="closebtn" onclick="closeNav()"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/singleplayer.png">Profile</a>
-        <a href="#"><img src="Art Assets/Game Icons Expansion/PNG/White/1x/cpu.png">Match</a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/massiveMultiplayer.png">Friends</a>
-        <a href="#"><img src="Art Assets/Game Icons/PNG/White/1x/exclamation.png">Messages</a>
-      </div>
+        <a href="./profile.html"><img src="Art Assets/Game Icons/PNG/White/1x/singleplayer.png">Profile</a>
+        <a href="./match.html"><img src="Art Assets/Game Icons Expansion/PNG/White/1x/cpu.png">Match</a>
+        <a href="./friends.html"><img src="Art Assets/Game Icons/PNG/White/1x/massiveMultiplayer.png">Friends</a>
+    </div>
 
 
     <div class="row">
@@ -29,10 +28,10 @@
         </div>
 
         <div class="col float-right" style="margin-left:10%">
-            <button class="btn btn-lg" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/plus.png"/>              Add by ID</button>
+            <button class="btn btn-lg" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/plus.png"/>Add by ID</button>
         </div>
         <div class="col float-right">
-            <button class="btn btn-lg" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/signal3.png"/>              Filter</button>
+            <button class="btn btn-lg" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/signal3.png"/>Filter</button>
         </div>
     </div>
     <div class="row card-container">
@@ -43,12 +42,11 @@
             <div class="row match-user-name">
                 <h3>Name</h3>
             </div>
-            <span>wants to study: </span><div class="row match-user-subject"><p>science</p></div>
-            <span>Available on: </span><div class="row match-user-availability"><p>monday</p></div>
+            <span>wants to study: </span><div class="row match-user-subject" style="display:block"><p>science</p></div>
             <!-- Trigger/Open The Modal -->
             <button id="profileBtn1" class="btn profile">Profile</button>
-            <button class="btn cross" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
-            <button class="btn check" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
+            <button class="btn cross" type="button" onclick="ignore(0)"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
+            <button class="btn check" type="button" onclick="friend(0)"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
         </div>
         <div class="col cards">
             <div class="row match-user-image">
@@ -57,12 +55,11 @@
             <div class="row match-user-name">
                 <h3>Name</h3>
             </div>
-            <span>wants to study: </span><div class="row match-user-subject"><p>science</p></div>
-            <span>Available on: </span><div class="row match-user-availability"><p>monday</p></div>
+            <span>wants to study: </span><div class="row match-user-subject" style="display:block"><p>science</p></div>
             <!-- Trigger/Open The Modal -->
             <button id="profileBtn2" class="btn profile">Profile</button>
-            <button class="btn cross" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
-            <button class="btn check" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
+            <button class="btn cross" type="button" onclick="ignore(1)"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
+            <button class="btn check" type="button" onclick="friend(1)"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
         </div>
         <div class="col cards">
             <div class="row match-user-image">
@@ -71,47 +68,233 @@
             <div class="row match-user-name">
                 <h3>Name</h3>
             </div>
-            <span>wants to study: </span><div class="row match-user-subject"><p>science</p></div>
-            <span>Available on: </span><div class="row match-user-availability"><p>monday</p></div>
+            <span>wants to study: </span><div class="row match-user-subject" style="display:block"><p>science</p></div>
             <!-- Trigger/Open The Modal -->
             <button id="profileBtn3" class="btn profile">Profile</button>
-            <button class="btn cross" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
-            <button class="btn check" type="submit"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
+            <button class="btn cross" type="button" onclick="ignore(2)"><img src="./Art Assets/Game Icons/PNG/White/1x/cross.png"/></button>
+            <button class="btn check" type="button" onclick="friend(2)"><img src="./Art Assets/Game Icons/PNG/White/1x/checkmark.png"/></button>
         </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal1" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
+  <!-- The Modal -->
+  <div id="myModal1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="row">
             <span class="close1">&times;</span>
-            <p>Profile 1</p>
+            <div class="row match-user-image">
+                <img src="/Profiles/0.png">
+            </div>
+            <div class="row match-user-name">
+                <h2>Name</h2>
+            </div>
         </div>
-
+        <div class="row">
+            <h4>Strong Subjects: </h4><div class="col profile-user-strongsubject"><p>science</p></div>
+            <h4>Subjects that need improvement: </h4><div class="col profile-user-weaksubject"><p>science</p></div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <h4>Available on: </h4>
+            <div class="col profile-user-availability">
+                <table class="tg">
+                    <thead>
+                      <tr>
+                        <th class="tg-0lax"></th>
+                        <th class="tg-0lax">Monday</th>
+                        <th class="tg-0lax">Tuesday</th>
+                        <th class="tg-0lax">Wednesday</th>
+                        <th class="tg-0lax">Thursday</th>
+                        <th class="tg-0lax">Friday</th>
+                        <th class="tg-0lax">Saturday</th>
+                        <th class="tg-0lax">Sunday</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="tg-0lax">Morning</td>
+                        <td class="tg-0lax mon0"></td>
+                        <td class="tg-0lax tue0"></td>
+                        <td class="tg-0lax wed0"></td>
+                        <td class="tg-0lax thu0"></td>
+                        <td class="tg-0lax fri0"></td>
+                        <td class="tg-0lax sat0"></td>
+                        <td class="tg-0lax sun0"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Afternoon</td>
+                        <td class="tg-0lax mon1"></td>
+                        <td class="tg-0lax tue1"></td>
+                        <td class="tg-0lax wed1"></td>
+                        <td class="tg-0lax thu1"></td>
+                        <td class="tg-0lax fri1"></td>
+                        <td class="tg-0lax sat1"></td>
+                        <td class="tg-0lax sun1"></td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0lax">Evening</td>
+                        <td class="tg-0lax mon2"></td>
+                        <td class="tg-0lax tue2"></td>
+                        <td class="tg-0lax wed2"></td>
+                        <td class="tg-0lax thu2"></td>
+                        <td class="tg-0lax fri2"></td>
+                        <td class="tg-0lax sat2"></td>
+                        <td class="tg-0lax sun2"></td>
+                      </tr>
+                    </tbody>
+                    </table>
+            </div>
+        </div>
     </div>
+
+</div>
     <!-- The Modal -->
     <div id="myModal2" class="modal">
-
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close2">&times;</span>
-            <p>profile 2</p>
+            <div class="row">
+                <span class="close2">&times;</span>
+                <div class="row match-user-image">
+                    <img src="/Profiles/0.png">
+                </div>
+                <div class="row match-user-name">
+                    <h2>Name</h2>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Strong Subjects: </h4><div class="col profile-user-strongsubject"><p>science</p></div>
+                <h4>Subjects that need improvement: </h4><div class="col profile-user-weaksubject"><p>science</p></div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <h4>Available on: </h4>
+                <div class="col profile-user-availability">
+                    <table class="tg">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax"></th>
+                            <th class="tg-0lax">Monday</th>
+                            <th class="tg-0lax">Tuesday</th>
+                            <th class="tg-0lax">Wednesday</th>
+                            <th class="tg-0lax">Thursday</th>
+                            <th class="tg-0lax">Friday</th>
+                            <th class="tg-0lax">Saturday</th>
+                            <th class="tg-0lax">Sunday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">Morning</td>
+                            <td class="tg-0lax mon0"></td>
+                            <td class="tg-0lax tue0"></td>
+                            <td class="tg-0lax wed0"></td>
+                            <td class="tg-0lax thu0"></td>
+                            <td class="tg-0lax fri0"></td>
+                            <td class="tg-0lax sat0"></td>
+                            <td class="tg-0lax sun0"></td>
+                          </tr>
+                          <tr>
+                            <td class="tg-0lax">Afternoon</td>
+                            <td class="tg-0lax mon1"></td>
+                            <td class="tg-0lax tue1"></td>
+                            <td class="tg-0lax wed1"></td>
+                            <td class="tg-0lax thu1"></td>
+                            <td class="tg-0lax fri1"></td>
+                            <td class="tg-0lax sat1"></td>
+                            <td class="tg-0lax sun1"></td>
+                          </tr>
+                          <tr>
+                            <td class="tg-0lax">Evening</td>
+                            <td class="tg-0lax mon2"></td>
+                            <td class="tg-0lax tue2"></td>
+                            <td class="tg-0lax wed2"></td>
+                            <td class="tg-0lax thu2"></td>
+                            <td class="tg-0lax fri2"></td>
+                            <td class="tg-0lax sat2"></td>
+                            <td class="tg-0lax sun2"></td>
+                          </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </div>
         </div>
 
     </div>
-    <!-- The Modal -->
-    <div id="myModal3" class="modal">
-
+     <!-- The Modal -->
+     <div id="myModal3" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
-            <span class="close3">&times;</span>
-            <p>profile 3</p>
+            <div class="row">
+                <span class="close3">&times;</span>
+                <div class="row match-user-image">
+                    <img src="/Profiles/0.png">
+                </div>
+                <div class="row match-user-name">
+                    <h2>Name</h2>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Strong Subjects: </h4><div class="col profile-user-strongsubject"><p>science</p></div>
+                <h4>Subjects that need improvement: </h4><div class="col profile-user-weaksubject"><p>science</p></div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <h4>Available on: </h4>
+                <div class="col profile-user-availability">
+                    <table class="tg">
+                        <thead>
+                          <tr>
+                            <th class="tg-0lax"></th>
+                            <th class="tg-0lax">Monday</th>
+                            <th class="tg-0lax">Tuesday</th>
+                            <th class="tg-0lax">Wednesday</th>
+                            <th class="tg-0lax">Thursday</th>
+                            <th class="tg-0lax">Friday</th>
+                            <th class="tg-0lax">Saturday</th>
+                            <th class="tg-0lax">Sunday</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-0lax">Morning</td>
+                            <td class="tg-0lax mon0"></td>
+                            <td class="tg-0lax tue0"></td>
+                            <td class="tg-0lax wed0"></td>
+                            <td class="tg-0lax thu0"></td>
+                            <td class="tg-0lax fri0"></td>
+                            <td class="tg-0lax sat0"></td>
+                            <td class="tg-0lax sun0"></td>
+                          </tr>
+                          <tr>
+                            <td class="tg-0lax">Afternoon</td>
+                            <td class="tg-0lax mon1"></td>
+                            <td class="tg-0lax tue1"></td>
+                            <td class="tg-0lax wed1"></td>
+                            <td class="tg-0lax thu1"></td>
+                            <td class="tg-0lax fri1"></td>
+                            <td class="tg-0lax sat1"></td>
+                            <td class="tg-0lax sun1"></td>
+                          </tr>
+                          <tr>
+                            <td class="tg-0lax">Evening</td>
+                            <td class="tg-0lax mon2"></td>
+                            <td class="tg-0lax tue2"></td>
+                            <td class="tg-0lax wed2"></td>
+                            <td class="tg-0lax thu2"></td>
+                            <td class="tg-0lax fri2"></td>
+                            <td class="tg-0lax sat2"></td>
+                            <td class="tg-0lax sun2"></td>
+                          </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </div>
         </div>
 
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -133,5 +316,6 @@
 
     <script src="match.js"></script>
     <script src="authRequired.js"></script>
+    <script src="logout.js"></script>
 </body>
 </html>
