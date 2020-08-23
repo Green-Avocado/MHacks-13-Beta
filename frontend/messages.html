@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>register</title>
+    <title>messages</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;800&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/register.css">
+    <link rel="stylesheet" href="stylesheets/messages.css">
     <link rel="stylesheet" href="stylesheets/sidebar.css">
 </head>
 <body>
@@ -22,8 +22,19 @@
 
 
     <div class="row">
-        <button class="openbtn" onclick="openNav()"><img src="Art Assets/Game Icons/PNG/White/1x/menuList.png"> Navigation</button>
-        <img src="stylesheets/registration-background.PNG"/>
+        <button class="openbtn" onclick="openNav()"><img src="Art Assets/Game Icons/PNG/White/1x/menuList.png"></button>
+        <img src="stylesheets/messages-background.PNG"/>
+    </div>
+    <div class="row float-right" style="margin-left:10%">
+        <button class="btn btn-lg" type="submit">Start new conversation</button>
+    </div>
+    <div class="row message-box">
+        <div class="col user-photo"></div>
+        <div class="col user-text">
+            <div class="row user-name"></div>
+            <div class="row user-text"></div>
+            <div class="row user-name"></div>
+        </div>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
