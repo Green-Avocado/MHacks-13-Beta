@@ -11,7 +11,7 @@ function loadUserProfiles() {
                 if(doc.id != user.uid) {
                     userList.push(doc);
                 }
-            }
+            });
         });
 }
 
