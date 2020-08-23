@@ -62,6 +62,57 @@ function getMatch(index) {
             }
         }
 
+        for(let i = 0; i < 3; i++) {
+            if(data.availableMonday[i]) {
+                modal.getElementsByClassName('mon' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('mon' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableTuesday[i]) {
+                modal.getElementsByClassName('tue' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('tue' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableWednesday[i]) {
+                modal.getElementsByClassName('wed' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('wed' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableThursday[i]) {
+                modal.getElementsByClassName('thu' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('thu' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableFriday[i]) {
+                modal.getElementsByClassName('fri' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('fri' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableSaturday[i]) {
+                modal.getElementsByClassName('sat' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('sat' + i.toString())[0].innerText = '';
+            }
+
+            if(data.availableSunday[i]) {
+                modal.getElementsByClassName('sun' + i.toString())[0].innerText = '✓';
+            }
+            else {
+                modal.getElementsByClassName('sun' + i.toString())[0].innerText = '';
+            }
+        }
+
         image.innerHTML = `<img src="/Profiles/${data.profilePicture}.png">`;
         name.innerHTML = `<h3>${data.fname} ${data.lname}</h3>`;
         subjects.innerHTML = weakSubjects;
