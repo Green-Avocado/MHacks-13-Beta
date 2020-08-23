@@ -55,21 +55,45 @@ function fieldsValid() {
 function populateUserData() {
     var user = firebase.auth().currentUser;
 
+    var pfp = 0;
+
+    if(document.getElementById('beige').checked) pfp = 1; 
+    else if(document.getElementById('blue').checked) pfp = 2; 
+    else if(document.getElementById('red').checked) pfp = 3; 
+    else if(document.getElementById('green').checked) pfp = 4; 
+    else if(document.getElementById('yellow').checked) pfp = 5; 
+
     firebase.database().ref('users/' + user.uid).update({
         fname : document.getElementById('fname').value,
         lname : document.getElementById('lname').value,
-        goodmath : document.getElementById('goodmath').value,
-        badmath : document.getElementById('badmath').value,
-        goodscience : document.getElementById('goodscience').value,
-        badscience : document.getElementById('badscience').value,
-        goodhistory : document.getElementById('goodhistory').value,
-        badhistory : document.getElementById('badhistory').value,
-        goodenglish : document.getElementById('goodenglish').value,
-        badenglish : document.getElementById('badenglish').value,
-        goodfrench : document.getElementById('goodfrench').value,
-        badfrench : document.getElementById('badfrench').value,
-        goodspanish : document.getElementById('goodspanish').value,
-        badspanish : document.getElementById('badspanish').value
+
+        good-math : document.getElementById('goodMath').value,
+        bad-math : document.getElementById('badMath').value,
+
+        good-science : document.getElementById('goodScience').value,
+        bad-science : document.getElementById('badScience').value,
+
+        good-history : document.getElementById('goodHistory').value,
+        bad-history : document.getElementById('badHistory').value,
+
+        good-english : document.getElementById('goodEnglish').value,
+        bad-english : document.getElementById('badEnglish').value,
+
+        good-french : document.getElementById('goodFrench').value,
+        bad-french : document.getElementById('badFrench').value,
+
+        good-spanish : document.getElementById('goodSpanish').value,
+        bad-spanish : document.getElementById('badSpanish').value,
+
+        available-monday : document.getElementById('monday').value,
+        available-tuesday : document.getElementById('tuesday').value,
+        available-wednesday : document.getElementById('wednesday').value,
+        available-thursday : document.getElementById('thursday').value,
+        available-friday : document.getElementById('friday').value,
+        available-saturday : document.getElementById('saturday').value,
+        available-sunday : document.getElementById('sunday').value,
+
+        profile-picture : pfp
     });
 }
 
