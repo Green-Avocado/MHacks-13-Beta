@@ -11,6 +11,3 @@
     border-radius: 30px;
     font-family: 'Baloo Tamma 2';
 }
-select#pfp option[value="beige"] {
-    background-image:url(./Art Assets/Platformer Assets Extra Animations & Enemies/Alien sprites/alienBeige_badge2.png);
-    }
