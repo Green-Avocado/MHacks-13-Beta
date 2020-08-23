@@ -35,6 +35,8 @@ function getMatch(index) {
 
     var modalName = modal.getElementsByClassName('match-user-name')[0];
     var modalImage = modal.getElementsByClassName('match-user-image')[0];
+    var modalWeaks = modal.getElementsByClassName('profile-user-weaksubject')[0];
+    var modalStrongs = modal.getElementsByClassName('profile-user-strongsubject')[0];
 
     var newMatch = userList.pop();
     if(newMatch == undefined) {
@@ -48,19 +50,27 @@ function getMatch(index) {
         var weakSubjects = '';
         var weaks = [data.badMath, data.badScience, data.badHistory, data.badEnglish, data.badFrench, data.badSpanish];
 
-        for(let i = 0; i < weaks.length; i++) {
+        var strongSubjects = '';
+        var strongs = [data.goodMath, data.goodScience, data.goodHistory, data.goodEnglish, data.goodFrench, data.goodSpanish];
+
+        for(let i = 0; i < subjectNames.length; i++) {
             if(weaks[i]) {
                 weakSubjects += `<p>${subjectNames[i]}</p>`;
+            }
+            if(strongs[i]) {
+                strongSubjects += `<p>${subjectNames[i]}</p>`;
             }
         }
 
         image.innerHTML = `<img src="/Profiles/${data.profilePicture}.png">`;
         name.innerHTML = `<h3>${data.fname} ${data.lname}</h3>`;
+        subjects.innerHTML = weakSubjects;
 
         modalImage.innerHTML = `<img src="/Profiles/${data.profilePicture}.png">`;
         modalName.innerHTML = `<h3>${data.fname} ${data.lname}</h3>`;
+        modalStrongs.innerHTML = strongSubjects;
+        modalWeaks.innerHTML = weakSubjects;
 
-        subjects.innerHTML = weakSubjects;
     }
 }
 
